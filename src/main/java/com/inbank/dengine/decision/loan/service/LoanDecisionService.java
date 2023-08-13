@@ -44,10 +44,11 @@ public class LoanDecisionService {
         BigDecimal creditScore = (eligibleLoanAmount.divide(loanDecisionRequestDTO.getLoanAmount(), MathContext.DECIMAL128));
 
         if (creditScore.compareTo(BigDecimal.ONE) >= 0) {
+
             //eligible loan amount can't be exceeded the maximum loan amount
-            BigDecimal userEligibleLoanAmount = eligibleLoanAmount.compareTo(GlobalConstant.LoanConstraints.MAXIMUM_SUM) >= 0 ? GlobalConstant.LoanConstraints.MAXIMUM_SUM : eligibleLoanAmount;
+            eligibleLoanAmount = eligibleLoanAmount.compareTo(GlobalConstant.LoanConstraints.MAXIMUM_SUM) >= 0 ? GlobalConstant.LoanConstraints.MAXIMUM_SUM : eligibleLoanAmount;
             return LoanDecisionResponseDTO.builder().decision(GlobalConstant.LoanDecisionMessages.LOAN_APPROVED)
-                    .loanAmount(userEligibleLoanAmount)
+                    .loanAmount(eligibleLoanAmount)
                     .build();
         }
 

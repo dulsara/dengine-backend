@@ -17,8 +17,8 @@ public class GlobalConstant {
 
         public static final String LOAN_APPROVED = "Your Loan request has been APPROVED.";
         public static final String LOAN_REJECTED = "Requested loan request has been REJECTED.";
-        public static final String SUGGESTED_AMOUNT = "Bank Suggested Amount is here ";
-        public static final String SUGGESTED_PERIOD = "Bank Suggested Period : ";
+        public static final String SUGGESTED_AMOUNT = "Bank suggests new amount ";
+        public static final String SUGGESTED_PERIOD = "Bank suggest new loan period : ";
     }
 
     public static class LoanDecisionErrors {
@@ -26,8 +26,8 @@ public class GlobalConstant {
         public static final String HIGHER_THAN_MAXIMUM_AMOUNT = "Requested Loan amount is higher than : " + MAXIMUM_SUM;
         public static final String LESS_THAN_MINIMUM_PERIOD = "Requested Loan Period is less than : " + MINIMUM_PERIOD;
         public static final String MORE_THAN_MAXIMUM_PERIOD = "Requested Loan Period is higher than : " + MAXIMUM_PERIOD;
-        public static final String INVALID_USER_ACCOUNT = "No User Account for givenId : ";
-        public static final String USER_IS_HAVING_DEBT = "user is having Debt.";
-        public static final String INTERNAL_DATA_ERROR = "User data has invalid for userId : ";
+        public static final String INVALID_USER_ACCOUNT = "No user account for given personal code : ";
+        public static final String USER_IS_HAVING_DEBT = "user is having Debt. ";
+        public static final String INTERNAL_DATA_ERROR = "User data has invalid for personal code : ";
     }
 }
